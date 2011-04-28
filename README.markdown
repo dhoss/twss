@@ -33,7 +33,7 @@ Goals
 
 There aren't any, other than to laugh.
 
-I made [twssbot][twssbot] which is a TWSS IRC bot that using twss and [isaac][isaac]
+I made [twssbot][twssbot] which is a TWSS IRC bot that uses twss and [isaac][isaac]
 
 I'd love to see some other random applications of twss, but not a twitter bot.
 For the love of all things good in this world, please don't make a Twitter
