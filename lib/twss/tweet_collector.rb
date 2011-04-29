@@ -1,5 +1,4 @@
 require 'twitter'
-require 'yajl'
 
 module TWSS
 
