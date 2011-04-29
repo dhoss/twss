@@ -38,6 +38,7 @@ begin
 
     gemspec.add_development_dependency "jeweler"
     gemspec.add_development_dependency "twitter"
+    gemspec.add_development_dependency "yajl"
   end
 end
 
