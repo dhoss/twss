@@ -1,4 +1,5 @@
 require 'twitter'
+require 'yajl'
 
 module TWSS
 
@@ -14,7 +15,7 @@ module TWSS
       o = File.open(filename, 'a')
       page, per_page = 1, 100
       begin
-        Twitter::Search.new(search).per_page(per_page).page(page).each do |tweet|
+        Twitter::Search.new.containing(search).per_page(per_page).page(page).each do |tweet|
           puts tweet.text
           o.puts tweet.text
         end
