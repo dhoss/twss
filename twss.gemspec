@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "twss"
-  s.version = "0.0.3"
+  s.version = "0.0.4"
   s.platform    = Gem::Platform::RUBY
   s.authors = ["Ben VandenBos"]
   s.email = "bvandenbos@gmail.com"
@@ -17,8 +17,7 @@ Gem::Specification.new do |s|
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   s.require_path = 'lib'
 
-  s.add_runtime_dependency("classifier", [">= 1.3.1"])
+  s.add_runtime_dependency("classifier", ["1.3.1"])
   s.add_development_dependency("twitter", [">= 0"])
   
 end
-

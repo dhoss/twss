@@ -24,6 +24,7 @@ module TWSS
     def classify(str)
       if basic_conditions_met?(str)
         c = @classifier.classifications(str)
+        require 'pp'
         c[TRUE] - c[FALSE] > threshold
       else
         false
