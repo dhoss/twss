@@ -4,12 +4,11 @@ module TWSS
 
   class Trainer
 
-    attr_reader :engine, :training_percentage
+    attr_reader :engine
 
     def initialize(engine, options = {})
       @engine = engine
       engine.clear_state!
-      @training_percentage = options[:training_percentage] || 0.9
     end
 
     def train
@@ -66,7 +65,7 @@ module TWSS
       false_positives = 0
       total = 0
       correct = 0
-      test_each(positive_test_file, (total_positive * training_percentage).to_i) do |line, result|
+      test_each(positive_test_file) do |line, result|
         if result
           correct += 1
         else
@@ -75,7 +74,7 @@ module TWSS
         total += 1
       end
 
-      test_each(negative_test_file, (total_negative * training_percentage).to_i) do |line, result|
+      test_each(negative_test_file) do |line, result|
         if !result
           correct += 1
         else
@@ -92,10 +91,9 @@ module TWSS
       puts
     end
     
-    def test_each(file, sample_size, &blk)
+    def test_each(file, &blk)
       i = 0
       File.read(file).each_line do |line|
-        return if i > sample_size
         l = line.strip
         unless l.empty?
           r = TWSS(l)
