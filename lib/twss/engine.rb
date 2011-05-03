@@ -17,7 +17,7 @@ module TWSS
     
     def initialize(options = {})
       @data_file = options[:data_file] || DATA_FILE
-      @threshold ||= options[:threshold] || 7.5
+      @threshold ||= options[:threshold] || 7.0
       @classifier = load_classifier_from_file!(@data_file) || new_classifier
     end
 
