@@ -95,8 +95,6 @@ module TWSS
     def test_each(file, sample_size, &blk)
       i = 0
       File.read(file).each_line do |line|
-        print '.'
-        $stdout.flush
         return if i > sample_size
         l = line.strip
         unless l.empty?
