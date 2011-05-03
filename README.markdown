@@ -22,7 +22,7 @@ Usage
 You can also adjust the scoring threshold for your comedic customization.  The
 lower the value, the more "obscure" the jokes can be.
 
-    TWSS.treshold = 2.0
+    TWSS.threshold = 2.0
 
 It's far from perfect, but it's accurate enough to be funny.  I'll probably
 continue tweaking it some (increase the training set size and whatnot).  I'm not
@@ -38,6 +38,12 @@ I made [twssbot][twssbot] which is a TWSS IRC bot that uses twss and [isaac][isa
 I'd love to see some other random applications of twss, but not a twitter bot.
 For the love of all things good in this world, please don't make a Twitter
 bot out of this. #ihatetwitterbots
+
+A few things to keep in mind when using this:
+
+ * I coded this on my 20 minute bus ride home from work.  Needless to say - it's not robust and probably wrong more than it's right (which in and of itself is funny).
+ * The very existence of this gem was intended as a joke.  In fact, it's sort of a meta-joke (which should please all you hipster-hackers out there).
+
 
 Forks, patches, and tests welcome!
 
