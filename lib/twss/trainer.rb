@@ -23,23 +23,6 @@ module TWSS
       run_tests(path)
     end
 
-    def run_examples
-      ["how big is that thing going to get?",
-       "umm... that's the not the right hole",
-       "did you resolve the ticket?",
-       "did you fix the bug?",
-       "you're going to need to go faster",
-       "I'm almost there, keep going",
-       "Ok, send me a pull request",
-       "The president issued a decree",
-       "I don't get it, this isn't working correctly",
-       "finished specialties in the warehouse",
-       "Did you realize you just broke the build?",
-       "Take it out and start wagging it around until it gets wet"].each do |s|
-         puts '"' + s + '" => ' + TWSS(s).to_s
-       end
-    end
-    
     def total_documents(file)
       t = 0
       File.read(file).each_line do |l|
